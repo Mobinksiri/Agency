@@ -1,7 +1,17 @@
 import "./App.css";
+import Styled from "styled-components";
+import Home from "./pages/Home";
+
+const AppEl = Styled.div`
+
+`;
 
 function App() {
-   return <div className="App"></div>;
+   return (
+      <AppEl>
+         <Home />
+      </AppEl>
+   );
 }
 
 export default App;

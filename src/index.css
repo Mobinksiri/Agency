@@ -1,7 +1,29 @@
+@font-face {
+   font-family: Epilogue;
+   src: url(./assets/Fonts/Epilogue-VariableFont_wght.ttf);
+}
+
+@font-face {
+   font-family: Epilogue-Italic;
+   src: url(./assets/Fonts/Epilogue-Italic-VariableFont_wght.ttf);
+}
+
+:root {
+   --text-dark: #391400;
+   --text-dark--accent: #ef6d58;
+   --text-dark--gray: rgba(57, 20, 0, 0.64);
+   --text-light: #fff;
+   --text-light--accent: #ef6d58;
+   --text-light--gray: rgba(255, 255, 255, 0.64);
+}
+
 *,
 *::before,
 *::after {
    padding: 0;
    margin: 0;
    box-sizing: border-box;
+   font-family: Epilogue;
+   list-style: none;
+   text-decoration: none;
 }
