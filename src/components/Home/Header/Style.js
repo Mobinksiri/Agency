@@ -2,7 +2,7 @@ import Styled from "styled-components";
 import { Device } from "../../../components/Styles/Devices";
 
 export const HeaderEl = Styled.div`
-   padding: 100px 0 64px 0;
+   padding: 50px 0 64px 0;
    background-color: #28293E;
 
    .rightSide {

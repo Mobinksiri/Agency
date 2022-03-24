@@ -17,18 +17,14 @@ export const TitleLayout = ({
 }) => {
    const [mobile, setMobile] = useState(null);
    const getWindowSize = () => {
-      console.log(window.innerWidth);
       if (window.innerWidth <= 425) {
-         console.log("yes");
          setMobile(true);
       } else {
-         console.log("no");
          setMobile(false);
       }
    };
 
    useEffect(() => {
-      console.log(window.innerWidth);
       getWindowSize();
       window.addEventListener("resize", getWindowSize);
    }, []);
@@ -42,7 +38,7 @@ export const TitleLayout = ({
          margin-bottom: 24px;
       }
 
-      h1 {
+      h1, h2, h3, p {
          margin-bottom: 24px;
       }
 
@@ -59,9 +55,19 @@ export const TitleLayout = ({
             text={tag}
          />
          <Heading
-            element={titleElement}
+            element={
+               titleElement === "h1" && mobile
+                  ? "h2"
+                  : titleElement === "h2" && mobile
+                  ? "h3"
+                  : titleElement
+            }
             elementType={
-               titleElementType === "h1" && mobile ? "h2" : titleElementType
+               titleElementType === "h1" && mobile
+                  ? "h2"
+                  : titleElementType === "h2" && mobile
+                  ? "h3"
+                  : titleElementType
             }
             color={titleColor}
             text={title}

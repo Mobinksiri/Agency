@@ -3,7 +3,7 @@ import Styled from "styled-components";
 import { Device } from "./Devices";
 
 const ContainerEl = Styled.div`
-   max-width: 1120px;
+   max-width: 1100px;
    margin: 0 auto;
 
    @media screen and (max-width: 1200px) {
@@ -28,5 +28,5 @@ const ContainerEl = Styled.div`
 `;
 
 export const Container = (props) => {
-   return <ContainerEl>{props.children}</ContainerEl>;
+   return <ContainerEl id="container">{props.children}</ContainerEl>;
 };

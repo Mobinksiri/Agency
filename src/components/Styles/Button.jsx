@@ -42,6 +42,7 @@ class Button extends React.Component {
                hoverBackground: "",
                hoverColor: "",
             });
+            break;
          case "outline":
             this.setState({
                border: "1px solid rgba(255, 255, 255, 0.295743)",
