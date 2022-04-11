@@ -2,7 +2,9 @@ import React from "react";
 import HomeAbout from "../components/Home/About/HomeAbout";
 import BitMap from "../components/Home/BitMap/BitMap";
 import Features from "../components/Home/Features/Features";
+import { GetStarted } from "../components/Home/GetStarted/GetStarted";
 import { Header } from "../components/Home/Header/Header";
+import Portfolio from "../components/Home/Portfolio/Portfolio";
 import SecondService from "../components/Home/SecondService/SecondService";
 import Service from "../components/Home/Service/Service";
 import VideoReel from "../components/Home/VideoReel/VideoReel";
@@ -35,6 +37,8 @@ function Home() {
          <StaticFeature />
          <Service />
          <SecondService />
+         <Portfolio />
+         <GetStarted />
       </>
    );
 }
