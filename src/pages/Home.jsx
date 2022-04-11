@@ -1,6 +1,7 @@
 import React from "react";
 import HomeAbout from "../components/Home/About/HomeAbout";
 import BitMap from "../components/Home/BitMap/BitMap";
+import Events from "../components/Home/Events/Events";
 import Features from "../components/Home/Features/Features";
 import { GetStarted } from "../components/Home/GetStarted/GetStarted";
 import { Header } from "../components/Home/Header/Header";
@@ -22,16 +23,7 @@ function Home() {
          <BitMap />
          <HomeAbout />
          <Experience />
-         <HowWeWork
-            link={
-               <Heading
-                  element="p"
-                  elementType="text"
-                  color="dark"
-                  text="Read More"
-               />
-            }
-         />
+         <HowWeWork />
          <VideoReel />
          <Features />
          <StaticFeature />
@@ -39,6 +31,7 @@ function Home() {
          <SecondService />
          <Portfolio />
          <GetStarted />
+         <Events />
       </>
    );
 }

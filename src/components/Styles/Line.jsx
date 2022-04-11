@@ -8,11 +8,7 @@ const LineEl = Styled.div`
 `;
 
 const Line = () => {
-   return (
-      <Container>
-         <LineEl id="line" />
-      </Container>
-   );
+   return <LineEl id="line" />;
 };
 
 export default Line;

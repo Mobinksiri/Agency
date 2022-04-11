@@ -92,7 +92,7 @@ export const ServiceEl = Styled.div`
       }
    }
 
-   @media screen and (max-width: 850px) {
+   @media screen and (max-width: 860px) {
       #container {
          #two-column {
             

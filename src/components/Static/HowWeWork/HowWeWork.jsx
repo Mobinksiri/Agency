@@ -6,7 +6,7 @@ import { TitleLayout } from "../TitleLayout/TitleLayout";
 import { HowWeWorkEl } from "./Style";
 import Line from "../../Styles/Line";
 
-const HowWeWork = ({ link }) => {
+const HowWeWork = () => {
    return (
       <>
          <HowWeWorkEl>
@@ -27,7 +27,12 @@ const HowWeWork = ({ link }) => {
                               paragraphColor="dark-gray"
                               max-width="470px"
                            />
-                           {link}
+                           <Heading
+                              element="p"
+                              elementType="text"
+                              color="dark"
+                              text="Read More"
+                           />
                         </>
                      }
                      right={
