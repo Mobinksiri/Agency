@@ -9,6 +9,7 @@ import { Header } from "../components/Home/Header/Header";
 import Portfolio from "../components/Home/Portfolio/Portfolio";
 import SecondService from "../components/Home/SecondService/SecondService";
 import Service from "../components/Home/Service/Service";
+import Testimonial from "../components/Home/Testimonial/Testimonial";
 import VideoReel from "../components/Home/VideoReel/VideoReel";
 import Experience from "../components/Static/Experience/Experience";
 import StaticFeature from "../components/Static/Features/StaticFeature";
@@ -35,6 +36,7 @@ function Home() {
          <Events />
          <OurTeam />
          <FounderWords />
+         <Testimonial />
       </>
    );
 }
