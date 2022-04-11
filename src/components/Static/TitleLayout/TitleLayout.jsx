@@ -60,6 +60,8 @@ export const TitleLayout = ({
                   ? "h2"
                   : titleElement === "h2" && mobile
                   ? "h3"
+                  : titleElement === "h3" && mobile
+                  ? "h4"
                   : titleElement
             }
             elementType={
@@ -67,6 +69,8 @@ export const TitleLayout = ({
                   ? "h2"
                   : titleElementType === "h2" && mobile
                   ? "h3"
+                  : titleElementType === "h3" && mobile
+                  ? "h4"
                   : titleElementType
             }
             color={titleColor}

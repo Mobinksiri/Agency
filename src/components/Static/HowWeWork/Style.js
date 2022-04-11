@@ -79,7 +79,7 @@ export const HowWeWorkEl = Styled.div`
                      p {
                         margin-bottom: 17px;
                      }
-                     h3 {
+                     h3, h4 {
                         margin-bottom: 15px;
                      }
                   }

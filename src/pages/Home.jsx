@@ -3,6 +3,7 @@ import HomeAbout from "../components/Home/About/HomeAbout";
 import BitMap from "../components/Home/BitMap/BitMap";
 import Events from "../components/Home/Events/Events";
 import Features from "../components/Home/Features/Features";
+import FounderWords from "../components/Home/FounderWords/FounderWords";
 import { GetStarted } from "../components/Home/GetStarted/GetStarted";
 import { Header } from "../components/Home/Header/Header";
 import Portfolio from "../components/Home/Portfolio/Portfolio";
@@ -33,6 +34,7 @@ function Home() {
          <GetStarted />
          <Events />
          <OurTeam />
+         <FounderWords />
       </>
    );
 }

@@ -10,7 +10,7 @@ export const SecondServiceEl = Styled.div`
          #title-layout {
             max-width: 100%;
 
-            h3 {
+            h3, h4 {
                max-width: 330px;
                margin-bottom: 35px;
             }

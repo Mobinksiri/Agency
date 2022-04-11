@@ -53,7 +53,7 @@ export const VideoReelEl = Styled.div`
                   p:first-child {
                      margin-bottom: 17px;
                   }
-                  h3 {
+                  h3, h4 {
                      margin-bottom: 17px;
                   }
                }

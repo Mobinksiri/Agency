@@ -114,7 +114,7 @@ export const ServiceEl = Styled.div`
                   p:first-child {
                      margin-bottom: 17px;
                   }
-                  h3 {
+                  h3, h4 {
                      margin-bottom: 13px;
                   }
                   p:last-child {
