@@ -13,7 +13,7 @@ import Experience from "../components/Static/Experience/Experience";
 import StaticFeature from "../components/Static/Features/StaticFeature";
 import HowWeWork from "../components/Static/HowWeWork/HowWeWork";
 import { Navbar } from "../components/Static/Navbar/Navbar";
-import { Heading } from "../components/Styles/Heading";
+import OurTeam from "../components/Static/OurTeam/OurTeam";
 
 function Home() {
    return (
@@ -32,6 +32,7 @@ function Home() {
          <Portfolio />
          <GetStarted />
          <Events />
+         <OurTeam />
       </>
    );
 }
