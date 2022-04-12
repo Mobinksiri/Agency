@@ -16,7 +16,7 @@ const GridBorder = ({ column, size, divisions, padding }) => {
       } else {
          setBorderRadius("0");
          setBorderRadiusMedia1("6px 0 0 0px");
-         setBorderRadiusMedia2("0 6px 0 0");
+         setBorderRadiusMedia2("0 6px 6px 0");
       }
    };
 
@@ -66,7 +66,7 @@ const GridBorder = ({ column, size, divisions, padding }) => {
          div:nth-of-type(3) {
             grid-column: 1/2;
             grid-row: 2/3;
-            border-radius: 0 0 0 6px;
+            border-radius: 0 0 6px 6px;
          }
       }
       @media screen and (max-width: 550px) {

@@ -18,6 +18,7 @@ import StaticFeature from "../components/Static/Features/StaticFeature";
 import HowWeWork from "../components/Static/HowWeWork/HowWeWork";
 import { Navbar } from "../components/Static/Navbar/Navbar";
 import OurTeam from "../components/Static/OurTeam/OurTeam";
+import Awards from "../components/Home/Awards/Awards";
 
 function Home() {
    return (
@@ -41,6 +42,7 @@ function Home() {
          <Testimonial />
          <Pricing />
          <Faq />
+         <Awards />
       </>
    );
 }
