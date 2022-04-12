@@ -19,6 +19,7 @@ import HowWeWork from "../components/Static/HowWeWork/HowWeWork";
 import { Navbar } from "../components/Static/Navbar/Navbar";
 import OurTeam from "../components/Static/OurTeam/OurTeam";
 import Awards from "../components/Home/Awards/Awards";
+import OurBlog from "../components/Home/OurBlog/OurBlog";
 
 function Home() {
    return (
@@ -43,6 +44,7 @@ function Home() {
          <Pricing />
          <Faq />
          <Awards />
+         <OurBlog />
       </>
    );
 }
