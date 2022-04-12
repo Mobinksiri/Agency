@@ -13,6 +13,7 @@ import Service from "../components/Home/Service/Service";
 import Testimonial from "../components/Home/Testimonial/Testimonial";
 import VideoReel from "../components/Home/VideoReel/VideoReel";
 import Experience from "../components/Static/Experience/Experience";
+import Faq from "../components/Home/Faq/Faq";
 import StaticFeature from "../components/Static/Features/StaticFeature";
 import HowWeWork from "../components/Static/HowWeWork/HowWeWork";
 import { Navbar } from "../components/Static/Navbar/Navbar";
@@ -39,6 +40,7 @@ function Home() {
          <FounderWords />
          <Testimonial />
          <Pricing />
+         <Faq />
       </>
    );
 }

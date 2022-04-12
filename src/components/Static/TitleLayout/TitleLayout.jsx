@@ -55,15 +55,7 @@ export const TitleLayout = ({
             text={tag}
          />
          <Heading
-            element={
-               titleElement === "h1" && mobile
-                  ? "h2"
-                  : titleElement === "h2" && mobile
-                  ? "h3"
-                  : titleElement === "h3" && mobile
-                  ? "h4"
-                  : titleElement
-            }
+            element={titleElement}
             elementType={
                titleElementType === "h1" && mobile
                   ? "h2"
