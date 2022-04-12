@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Styled from "styled-components";
 
-export const Heading = ({ text, color, element, elementType }) => {
+export const Heading = ({ text, color, element, elementType, id }) => {
    const [weight, setWeight] = useState();
    const [size, setSize] = useState();
    const [lineHeight, setLineHeight] = useState();
@@ -106,5 +106,5 @@ export const Heading = ({ text, color, element, elementType }) => {
    color: ${textColor};
 `;
 
-   return <HeadingStyle>{text}</HeadingStyle>;
+   return <HeadingStyle id={id}>{text}</HeadingStyle>;
 };

@@ -7,6 +7,7 @@ import FounderWords from "../components/Home/FounderWords/FounderWords";
 import { GetStarted } from "../components/Home/GetStarted/GetStarted";
 import { Header } from "../components/Home/Header/Header";
 import Portfolio from "../components/Home/Portfolio/Portfolio";
+import Pricing from "../components/Home/Pricing/Pricing";
 import SecondService from "../components/Home/SecondService/SecondService";
 import Service from "../components/Home/Service/Service";
 import Testimonial from "../components/Home/Testimonial/Testimonial";
@@ -37,6 +38,7 @@ function Home() {
          <OurTeam />
          <FounderWords />
          <Testimonial />
+         <Pricing />
       </>
    );
 }
