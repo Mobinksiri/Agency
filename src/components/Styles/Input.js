@@ -18,7 +18,7 @@ const Input = ({ type, placeholder, classType }) => {
 
    const InputEl = Styled.input`
       width: 270px;
-      height: 48px;
+      height: 47px;
       background-color: #fff;
       color: #391400A3;
       border-radius: 6px;

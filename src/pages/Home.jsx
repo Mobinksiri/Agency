@@ -20,6 +20,7 @@ import { Navbar } from "../components/Static/Navbar/Navbar";
 import OurTeam from "../components/Static/OurTeam/OurTeam";
 import Awards from "../components/Home/Awards/Awards";
 import OurBlog from "../components/Home/OurBlog/OurBlog";
+import Newsletter from "../components/Static/Newsletter/Newsletter";
 
 function Home() {
    return (
@@ -45,6 +46,7 @@ function Home() {
          <Faq />
          <Awards />
          <OurBlog />
+         <Newsletter />
       </>
    );
 }
