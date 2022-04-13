@@ -21,6 +21,9 @@ import OurTeam from "../components/Static/OurTeam/OurTeam";
 import Awards from "../components/Home/Awards/Awards";
 import OurBlog from "../components/Home/OurBlog/OurBlog";
 import Newsletter from "../components/Static/Newsletter/Newsletter";
+import GetInTouch from "../components/Home/GetInTouch/GetInTouch";
+import ContactCol from "../components/Static/ContactCol/ContactCol";
+import Footer from "../components/Static/Footer/Footer";
 
 function Home() {
    return (
@@ -47,6 +50,9 @@ function Home() {
          <Awards />
          <OurBlog />
          <Newsletter />
+         <GetInTouch />
+         <ContactCol />
+         <Footer />
       </>
    );
 }
