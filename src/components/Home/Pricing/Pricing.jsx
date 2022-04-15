@@ -18,7 +18,7 @@ const Pricing = () => {
                titleElementType="h2"
                titleColor="dark"
                paragraph="test"
-               paragraphElement="text"
+               paragraphElement="a"
                paragraphElementType="text"
                paragraphColor="dark"
                maxWidth="358px"

@@ -3,9 +3,8 @@ import React from "react";
 import { Heading } from "../../Styles/Heading";
 import { Device } from "../../Styles/Devices";
 
-const BlogPost = ({ title, image, body, date, width }) => {
-   const BlogPostEl = Styled.div`
-      width: ${width};
+const BlogPostEl = Styled.div`
+      width: ${(props) => props.width};
       margin-bottom: 50px;
    
       .image {
@@ -34,10 +33,11 @@ const BlogPost = ({ title, image, body, date, width }) => {
       @media screen and (max-width: 700px) {
          width: 100%;
       }
-   `;
+`;
 
+const BlogPost = ({ title, image, body, date, width }) => {
    return (
-      <BlogPostEl>
+      <BlogPostEl width={width}>
          <div className="image">
             <img src={image} alt={title} />
          </div>

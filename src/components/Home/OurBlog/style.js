@@ -21,7 +21,7 @@ export const OurBlogEl = Styled.div`
          }
 
          .leftSide {
-            text {
+            a {
                display: none;
             }
          }

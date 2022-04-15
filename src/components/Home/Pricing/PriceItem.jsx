@@ -4,27 +4,9 @@ import { Heading } from "../../Styles/Heading";
 import Button from "../../Styles/Button";
 import { Device } from "../../Styles/Devices";
 
-const PriceItem = ({ active, popular, title, price, paragraph, tags, id }) => {
-   const [padding, setPadding] = useState("");
-   const [background, setBackground] = useState("");
-
-   const checkPaddingHandler = () => {
-      if (active) {
-         setPadding("32px 48px 48px 48px");
-         setBackground("#fff");
-      } else {
-         setPadding("44px 48px 48px 48px");
-         setBackground("transparent");
-      }
-   };
-
-   useEffect(() => {
-      checkPaddingHandler();
-   }, []);
-
-   const PriceEl = Styled.div`
-      background-color: ${background};
-      padding: ${padding};
+const PriceEl = Styled.div`
+      background-color: ${(props) => props.background};
+      padding: ${(props) => props.padding};
       width: 33.333333333333333333333333333%;
       height: fit-content;
 
@@ -72,10 +54,28 @@ const PriceItem = ({ active, popular, title, price, paragraph, tags, id }) => {
          padding-left: 28px;
       }
       
-   `;
+`;
+
+const PriceItem = ({ active, popular, title, price, paragraph, tags, id }) => {
+   const [padding, setPadding] = useState("");
+   const [background, setBackground] = useState("");
+
+   const checkPaddingHandler = () => {
+      if (active) {
+         setPadding("32px 48px 48px 48px");
+         setBackground("#fff");
+      } else {
+         setPadding("44px 48px 48px 48px");
+         setBackground("transparent");
+      }
+   };
+
+   useEffect(() => {
+      checkPaddingHandler();
+   }, []);
 
    return (
-      <PriceEl id={id}>
+      <PriceEl padding={padding} background={background} id={id}>
          {active ? (
             <Heading
                id="popular"

@@ -10,7 +10,7 @@ export const PricingEl = Styled.div`
       #title-layout {
          margin-bottom: 16px;
          
-         text {
+         a {
             display: none;
          }
       }

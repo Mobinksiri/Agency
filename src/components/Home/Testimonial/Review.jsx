@@ -3,31 +3,13 @@ import { Heading } from "../../Styles/Heading";
 import Styled from "styled-components";
 import { Device } from "../../Styles/Devices";
 
-const Review = ({ star, paragraph, name, avatar, job, activate }) => {
-   const [color, setColor] = useState("");
-   const [shadow, setShadow] = useState("");
-
-   const checkActiveHandler = () => {
-      if (activate) {
-         setColor("#fff");
-         setShadow("0px 32px 64px rgba(57, 20, 0, 0.04)");
-      } else {
-         setColor("transparent");
-         setShadow("none");
-      }
-   };
-
-   useEffect(() => {
-      checkActiveHandler();
-   }, []);
-
-   const ReviewEl = Styled.div`
+const ReviewEl = Styled.div`
       padding: 48px;
       width: 100%;
       height: fit-content;
-      background-color: ${color};
+      background-color: ${(props) => props.color};
       display: inline-block;
-      box-shadow: ${shadow};
+      box-shadow: ${(props) => props.shadow};
 
       img.star {
          margin-bottom: 36px;
@@ -57,10 +39,28 @@ const Review = ({ star, paragraph, name, avatar, job, activate }) => {
       @media screen and ${Device.mobileL} {
          padding: 49px 28px 34px 28px;
       }
-   `;
+`;
+
+const Review = ({ star, paragraph, name, avatar, job, activate }) => {
+   const [color, setColor] = useState("");
+   const [shadow, setShadow] = useState("");
+
+   const checkActiveHandler = () => {
+      if (activate) {
+         setColor("#fff");
+         setShadow("0px 32px 64px rgba(57, 20, 0, 0.04)");
+      } else {
+         setColor("transparent");
+         setShadow("none");
+      }
+   };
+
+   useEffect(() => {
+      checkActiveHandler();
+   }, []);
 
    return (
-      <ReviewEl id="review">
+      <ReviewEl color={color} shadow={shadow} id="review">
          <img className="star" src={star} alt="" />
          <Heading
             text={paragraph}

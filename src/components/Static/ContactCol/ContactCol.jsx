@@ -38,7 +38,7 @@ const ContactCol = () => {
                         <span>
                            <img src={EmailImage} alt="Email" />
                            <Heading
-                              text="Phone"
+                              text="Email"
                               element="h5"
                               elementType="h5"
                               color="dark-accent"
@@ -55,7 +55,7 @@ const ContactCol = () => {
                         <span>
                            <img src={AddressImage} alt="Address" />
                            <Heading
-                              text="Phone"
+                              text="Address"
                               element="h5"
                               elementType="h5"
                               color="dark-accent"

@@ -5,23 +5,23 @@ import GridBorder from "../../Styles/GridBorder";
 import { Heading } from "../../Styles/Heading";
 import { Container } from "../../Styles/Container";
 
-const Experience = () => {
-   const ExperienceEl = Styled.div`
+const ExperienceEl = Styled.div`
       background-color: #FDF0E9 ;
       padding-bottom: 60px;
 
       @media screen and ${Device.mobileL} {
          padding-bottom: 20px;
       }
-   `;
+`;
 
-   const ExperienceDiv = Styled.div`
+const ExperienceDiv = Styled.div`
    
       h3 {
          margin-bottom: 13px;
       }
-   `;
+`;
 
+const Experience = () => {
    return (
       <ExperienceEl>
          <Container>

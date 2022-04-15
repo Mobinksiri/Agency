@@ -3,37 +3,17 @@ import Styled from "styled-components";
 import { Container } from "./Container";
 import { Device } from "./Devices";
 
-const GridBorder = ({ column, size, divisions, padding }) => {
-   const [borderRadius, setBorderRadius] = useState("");
-   const [borderRadiusMedia1, setBorderRadiusMedia1] = useState("");
-   const [borderRadiusMedia2, setBorderRadiusMedia2] = useState("");
-
-   const getBorderRadius = () => {
-      if (column === "2") {
-         setBorderRadius("0px 6px 6px 0px");
-         setBorderRadiusMedia1("6px 0 0 6px");
-         setBorderRadiusMedia2("0 6px 6px 0");
-      } else {
-         setBorderRadius("0");
-         setBorderRadiusMedia1("6px 0 0 0px");
-         setBorderRadiusMedia2("0 6px 6px 0");
-      }
-   };
-
-   useEffect(() => {
-      getBorderRadius();
-   }, []);
-
-   const Grid = Styled.div`
+const Grid = Styled.div`
       display: grid;
       width: 100%;
-      grid-template-columns: repeat(${column}, ${size});
+      grid-template-columns: repeat(${(props) => props.column}, ${(props) =>
+   props.size});
       grid-template-rows: repeat(1, max-width: 180px;);
       grid-gap: 1px;
       padding-bottom: 74px;
 
       div {
-         padding: ${padding};
+         padding: ${(props) => props.padding};
          box-shadow: 0 0 0 1px #F3D1BF;
       }
       
@@ -45,7 +25,7 @@ const GridBorder = ({ column, size, divisions, padding }) => {
       div:nth-of-type(2) {
          grid-column: 2/3;
          grid-row: 1/2;
-         border-radius: ${borderRadius}
+         border-radius: ${(props) => props.borderRadius}
       }
       div:nth-of-type(3) {
          grid-column: 3/4;
@@ -58,10 +38,10 @@ const GridBorder = ({ column, size, divisions, padding }) => {
          grid-template-columns: repeat(auto-fit, 50%);
 
          div:nth-of-type(1) {
-            border-radius: ${borderRadiusMedia1};
+            border-radius: ${(props) => props.borderRadiusMedia1};
          }
          div:nth-of-type(2) {
-            border-radius: ${borderRadiusMedia2};
+            border-radius: ${(props) => props.borderRadiusMedia2};
          }
          div:nth-of-type(3) {
             grid-column: 1/2;
@@ -99,7 +79,40 @@ const GridBorder = ({ column, size, divisions, padding }) => {
       }
    `;
 
-   return <Grid id="grid-border">{divisions}</Grid>;
+const GridBorder = ({ column, size, divisions, padding }) => {
+   const [borderRadius, setBorderRadius] = useState("");
+   const [borderRadiusMedia1, setBorderRadiusMedia1] = useState("");
+   const [borderRadiusMedia2, setBorderRadiusMedia2] = useState("");
+
+   const getBorderRadius = () => {
+      if (column === "2") {
+         setBorderRadius("0px 6px 6px 0px");
+         setBorderRadiusMedia1("6px 0 0 6px");
+         setBorderRadiusMedia2("0 6px 6px 0");
+      } else {
+         setBorderRadius("0");
+         setBorderRadiusMedia1("6px 0 0 0px");
+         setBorderRadiusMedia2("0 6px 6px 0");
+      }
+   };
+
+   useEffect(() => {
+      getBorderRadius();
+   }, []);
+
+   return (
+      <Grid
+         column={column}
+         size={size}
+         padding={padding}
+         borderRadius={borderRadius}
+         borderRadiusMedia1={borderRadiusMedia1}
+         borderRadiusMedia2={borderRadiusMedia2}
+         id="grid-border"
+      >
+         {divisions}
+      </Grid>
+   );
 };
 
 export default GridBorder;

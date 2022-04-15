@@ -24,7 +24,7 @@ const OurBlog = () => {
                      titleElementType="h2"
                      titleColor="dark"
                      paragraph="text"
-                     paragraphElement="text"
+                     paragraphElement="a"
                      paragraphElementType="text"
                      paragraphColor="dark"
                      maxWidth="320px"

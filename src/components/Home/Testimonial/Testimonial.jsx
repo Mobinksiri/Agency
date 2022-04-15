@@ -21,7 +21,8 @@ const Testimonial = () => {
                titleElementType="h2"
                titleColor="dark"
                paragraph="test"
-               paragraphElement="text"
+               paragraphElement="a"
+               paragraphElementType="text_big"
                paragraphColor="dark"
                maxWidth="100%"
             />

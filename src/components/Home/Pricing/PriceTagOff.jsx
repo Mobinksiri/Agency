@@ -3,16 +3,16 @@ import Styled from "styled-components";
 import { ReactComponent as TagSvg } from "../../../assets/Images/price-tag-off.svg";
 import { Heading } from "../../Styles/Heading";
 
-const PriceTagOff = ({ text }) => {
-   const TagEl = Styled.div`
+const TagEl = Styled.div`
       display: flex;
       align-items: center;
 
       svg {
          margin-right: 16px;   
       }
-   `;
+`;
 
+const PriceTagOff = ({ text }) => {
    return (
       <TagEl id="price-tag">
          <TagSvg />

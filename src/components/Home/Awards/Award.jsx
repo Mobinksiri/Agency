@@ -3,8 +3,7 @@ import Styled from "styled-components";
 import { Device } from "../../Styles/Devices";
 import { Heading } from "../../Styles/Heading";
 
-const Award = ({ image, title, date, logoImage, logoName }) => {
-   const AwardEl = Styled.div`
+const AwardEl = Styled.div`
       display: flex;
       width: 100%;
       justify-content: space-between;
@@ -100,8 +99,9 @@ const Award = ({ image, title, date, logoImage, logoName }) => {
 
          }
       }
-   `;
+`;
 
+const Award = ({ image, title, date, logoImage, logoName }) => {
    return (
       <AwardEl>
          <div className="dec">

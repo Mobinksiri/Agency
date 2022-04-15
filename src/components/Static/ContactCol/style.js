@@ -2,10 +2,12 @@ import Styled from "styled-components";
 
 export const ContactColEl = Styled.div`
    background-color: #FDF0E9;
-   padding: 80px 0 120px 0;
+   padding: 80px 0;
 
    #container {
       #grid-border {
+         padding-bottom: 0;
+         
          div {
             span {
                display: flex;

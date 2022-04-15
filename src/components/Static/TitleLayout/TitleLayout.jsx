@@ -3,6 +3,24 @@ import Styled from "styled-components";
 import { Heading } from "../../Styles/Heading";
 import { Device } from "../../Styles/Devices";
 
+const Layout = Styled.div`
+      max-width: ${(props) => props.maxWidth};
+      display: flex;
+      flex-flow: column;
+
+      p:first-child {
+         margin-bottom: 24px;
+      }
+
+      h1, h2, h3, p {
+         margin-bottom: 24px;
+      }
+
+      p:last-child {
+         max-width: 470px;
+      }
+`;
+
 export const TitleLayout = ({
    tag,
    paragraph,
@@ -29,25 +47,8 @@ export const TitleLayout = ({
       window.addEventListener("resize", getWindowSize);
    }, []);
 
-   const Layout = Styled.div`
-      max-width: ${maxWidth};
-      display: flex;
-      flex-flow: column;
-
-      p:first-child {
-         margin-bottom: 24px;
-      }
-
-      h1, h2, h3, p {
-         margin-bottom: 24px;
-      }
-
-      p:last-child {
-         max-width: 470px;
-      }
-   `;
    return (
-      <Layout id="title-layout">
+      <Layout maxWidth={maxWidth} id="title-layout">
          <Heading
             element="p"
             elementType="h5"
@@ -56,15 +57,7 @@ export const TitleLayout = ({
          />
          <Heading
             element={titleElement}
-            elementType={
-               titleElementType === "h1" && mobile
-                  ? "h2"
-                  : titleElementType === "h2" && mobile
-                  ? "h3"
-                  : titleElementType === "h3" && mobile
-                  ? "h4"
-                  : titleElementType
-            }
+            elementType={titleElementType}
             color={titleColor}
             text={title}
          />

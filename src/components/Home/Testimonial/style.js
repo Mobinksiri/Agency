@@ -16,7 +16,7 @@ export const TestimonialEl = Styled.div`
          max-width: 400px;
       }
 
-      text {
+      a {
          display: none;
       }
    }
