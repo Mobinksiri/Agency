@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Heading } from "../../Styles/Heading";
 import { ImageGrid } from "../../Styles/ImageGrid";
 import PortfolioWork from "../PortfolioWork/PortfolioWork";
 import { WorksEl } from "./Style";
@@ -7,7 +6,6 @@ import WorkImage1 from "../../../assets/Images/work-1.png";
 import WorkImage2 from "../../../assets/Images/work-2.png";
 import WorkImage3 from "../../../assets/Images/work-3.png";
 import WorkImage4 from "../../../assets/Images/work-4.png";
-import Input from "../../Styles/Input";
 import Select from "../../Styles/Select";
 import Categories from "./Categories";
 

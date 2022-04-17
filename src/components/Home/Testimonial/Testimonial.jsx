@@ -2,7 +2,7 @@ import React from "react";
 import { TestimonialEl } from "./style";
 import { Container } from "../../Styles/Container";
 import { TitleLayout } from "../../Static/TitleLayout/TitleLayout";
-import Review from "./Review";
+import Review from "../../Static/Review/Review";
 import StarImage from "../../../assets/Images/star.png";
 import Avatar1 from "../../../assets/Images/testimonial-avatar.png";
 import Avatar2 from "../../../assets/Images/testimonial-avatar-2.png";

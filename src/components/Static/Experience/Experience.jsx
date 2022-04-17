@@ -23,7 +23,7 @@ const ExperienceDiv = Styled.div`
 
 const Experience = () => {
    return (
-      <ExperienceEl>
+      <ExperienceEl id="experience">
          <Container>
             <GridBorder
                divisions={

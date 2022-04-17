@@ -2,6 +2,7 @@ import React from "react";
 import { Hamburger } from "./HamburgerStyle";
 import { Heading } from "../../Styles/Heading";
 import Button from "../../Styles/Button";
+import { Link } from "react-router-dom";
 
 export const HamburgerItems = ({ active, hamburgerActiveHandler }) => {
    return (
@@ -26,16 +27,18 @@ export const HamburgerItems = ({ active, hamburgerActiveHandler }) => {
             }
          >
             <li className="hamburger-item">
-               <Heading
-                  element="a"
-                  elementType="text"
-                  color="light"
-                  text="About"
-               />
+               <Link to="/about">
+                  <Heading
+                     element="p"
+                     elementType="text"
+                     color="light"
+                     text="About"
+                  />
+               </Link>
             </li>
             <li className="hamburger-item">
                <Heading
-                  element="a"
+                  element="p"
                   elementType="text"
                   color="light"
                   text="Services"
@@ -43,7 +46,7 @@ export const HamburgerItems = ({ active, hamburgerActiveHandler }) => {
             </li>
             <li className="hamburger-item">
                <Heading
-                  element="a"
+                  element="p"
                   elementType="text"
                   color="light"
                   text="Pricing"
@@ -51,7 +54,7 @@ export const HamburgerItems = ({ active, hamburgerActiveHandler }) => {
             </li>
             <li className="hamburger-item">
                <Heading
-                  element="a"
+                  element="p"
                   elementType="text"
                   color="light"
                   text="Blog"

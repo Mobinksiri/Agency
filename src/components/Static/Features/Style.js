@@ -58,7 +58,7 @@ export const StaticFeatureEl = Styled.div`
       }
    }
 
-   @media screen and (max-width: 850px) {
+   @media screen and (max-width: 900px) {
       #container {
          #two-column {
             flex-flow: column;
@@ -82,6 +82,7 @@ export const StaticFeatureEl = Styled.div`
             .rightSide {
                .feature-layout {
                   flex-flow: column;
+                  align-items: unset;
 
                   .professional {
                      border-radius: 6px 6px 0 0;

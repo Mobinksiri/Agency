@@ -8,8 +8,8 @@ const Layout = Styled.div`
       display: flex;
       flex-flow: column;
 
-      p:first-child {
-         margin-bottom: 24px;
+      h5 {
+         margin-bottom: 20px;
       }
 
       h1, h2, h3, p {
@@ -50,7 +50,7 @@ export const TitleLayout = ({
    return (
       <Layout maxWidth={maxWidth} id="title-layout">
          <Heading
-            element="p"
+            element="h5"
             elementType="h5"
             color="light-accent"
             text={tag}

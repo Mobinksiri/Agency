@@ -20,6 +20,7 @@ const FaqItemEl = Styled.div`
       h4 {
          width: calc(100% - 52px);
          pointer-events: none;
+         transition: 0.4s all;
       }
 
       svg {

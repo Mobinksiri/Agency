@@ -57,7 +57,7 @@ const PosterEl = Styled.div`
 
 const Poster = () => {
    return (
-      <PosterEl>
+      <PosterEl id="poster">
          <div className="poster-dec">
             <Heading
                text="We’re Help To Build Your Dream Project"

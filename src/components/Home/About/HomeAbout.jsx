@@ -6,6 +6,7 @@ import { TitleLayout } from "../../../components/Static/TitleLayout/TitleLayout"
 import Button from "../../../components/Styles/Button";
 
 import AboutImage from "../../../assets/Images/home-about--image.png";
+import { Link } from "react-router-dom";
 
 const HomeAbout = () => {
    return (
@@ -32,7 +33,13 @@ const HomeAbout = () => {
                         meant to partner on the long run, and work as an
                         extension of the merchant's team.
                      </p>
-                     <Button type="secondary" text="About Us" padding="large" />
+                     <Link to="/about">
+                        <Button
+                           type="secondary"
+                           text="About Us"
+                           padding="large"
+                        />
+                     </Link>
                   </>
                }
             />

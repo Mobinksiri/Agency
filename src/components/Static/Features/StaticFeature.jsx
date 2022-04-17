@@ -8,7 +8,7 @@ import { Heading } from "../../Styles/Heading";
 
 const StaticFeature = () => {
    return (
-      <StaticFeatureEl>
+      <StaticFeatureEl id="static-feature">
          <Container>
             <TwoColumn
                left={

@@ -8,7 +8,7 @@ import CopyRight from "../FooterMenu/CopyRight";
 
 const Footer = () => {
    return (
-      <FooterEl>
+      <FooterEl id="footer">
          <Container>
             <Poster />
             <FooterMenu />

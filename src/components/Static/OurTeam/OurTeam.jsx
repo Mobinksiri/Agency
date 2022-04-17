@@ -16,7 +16,7 @@ import "swiper/css/pagination";
 
 const OurTeam = () => {
    return (
-      <OurTeamEl>
+      <OurTeamEl id="our-team">
          <Container>
             <TitleLayout
                tag="Our Team"
@@ -32,6 +32,7 @@ const OurTeam = () => {
             />
             <Swiper
                spaceBetween={30}
+               grabCursor={true}
                breakpoints={{
                   // when window width is >= 1200px
                   1200: {

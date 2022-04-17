@@ -60,7 +60,7 @@ const CopyRightEl = Styled.div`
 
 const CopyRight = () => {
    return (
-      <CopyRightEl>
+      <CopyRightEl id="copy-right">
          <Heading
             text="Copyright © 2022 Laaqiq. All Rights Reserved."
             element="p"

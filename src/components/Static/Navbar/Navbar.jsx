@@ -5,6 +5,7 @@ import Logo from "../../../assets/Images/logo.png";
 import Button from "../../../components/Styles/Button";
 import { Heading } from "../../../components/Styles/Heading";
 import { HamburgerItems } from "./HamburgerItems";
+import { Link, NavLink } from "react-router-dom";
 
 export const Navbar = () => {
    const [hamburger, setHamburger] = useState(false);
@@ -14,7 +15,7 @@ export const Navbar = () => {
       setActive(!active);
    };
 
-   let content = null;
+   let content = <div>Loading...</div>;
 
    if (hamburger) {
       content = (
@@ -28,16 +29,18 @@ export const Navbar = () => {
          <>
             <div className="navbar-ul">
                <li className="navbar-ul--item">
-                  <Heading
-                     element="a"
-                     elementType="text"
-                     color="light"
-                     text="About"
-                  />
+                  <Link to="/about">
+                     <Heading
+                        element="p"
+                        elementType="text"
+                        color="light"
+                        text="About"
+                     />
+                  </Link>
                </li>
                <li className="navbar-ul--item">
                   <Heading
-                     element="a"
+                     element="p"
                      elementType="text"
                      color="light"
                      text="Services"
@@ -45,7 +48,7 @@ export const Navbar = () => {
                </li>
                <li className="navbar-ul--item">
                   <Heading
-                     element="a"
+                     element="p"
                      elementType="text"
                      color="light"
                      text="Pricing"
@@ -53,7 +56,7 @@ export const Navbar = () => {
                </li>
                <li className="navbar-ul--item">
                   <Heading
-                     element="a"
+                     element="p"
                      elementType="text"
                      color="light"
                      text="Blog"
@@ -76,17 +79,19 @@ export const Navbar = () => {
    };
 
    useEffect(() => {
-      getWindowSize();
       window.addEventListener("resize", getWindowSize);
+      getWindowSize();
    }, []);
 
    return (
       <NavbarEl>
          <Container>
             <div className="navbar-box">
-               <div className="navbar-logo">
-                  <img src={Logo} alt="Logo" />
-               </div>
+               <Link to="/">
+                  <div className="navbar-logo">
+                     <img src={Logo} alt="Logo" />
+                  </div>
+               </Link>
                {content}
             </div>
          </Container>
