@@ -39,12 +39,14 @@ export const Navbar = () => {
                   </Link>
                </li>
                <li className="navbar-ul--item">
-                  <Heading
-                     element="p"
-                     elementType="text"
-                     color="light"
-                     text="Services"
-                  />
+                  <Link to="/services">
+                     <Heading
+                        element="p"
+                        elementType="text"
+                        color="light"
+                        text="Services"
+                     />
+                  </Link>
                </li>
                <li className="navbar-ul--item">
                   <Heading

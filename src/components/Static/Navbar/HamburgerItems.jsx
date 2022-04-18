@@ -37,12 +37,14 @@ export const HamburgerItems = ({ active, hamburgerActiveHandler }) => {
                </Link>
             </li>
             <li className="hamburger-item">
-               <Heading
-                  element="p"
-                  elementType="text"
-                  color="light"
-                  text="Services"
-               />
+               <Link to="/services">
+                  <Heading
+                     element="p"
+                     elementType="text"
+                     color="light"
+                     text="Services"
+                  />
+               </Link>
             </li>
             <li className="hamburger-item">
                <Heading

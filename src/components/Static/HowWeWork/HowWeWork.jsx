@@ -5,6 +5,7 @@ import TwoColumn from "../../Styles/TwoColumn";
 import { TitleLayout } from "../TitleLayout/TitleLayout";
 import { HowWeWorkEl } from "./Style";
 import Line from "../../Styles/Line";
+import { Link } from "react-router-dom";
 
 const HowWeWork = () => {
    return (
@@ -27,12 +28,15 @@ const HowWeWork = () => {
                               paragraphColor="dark-gray"
                               max-width="470px"
                            />
-                           <Heading
-                              element="p"
-                              elementType="text"
-                              color="dark"
-                              text="Read More"
-                           />
+                           <Link to="/about">
+                              <Heading
+                                 id="read-more"
+                                 element="p"
+                                 elementType="text"
+                                 color="dark"
+                                 text="Read More"
+                              />
+                           </Link>
                         </>
                      }
                      right={

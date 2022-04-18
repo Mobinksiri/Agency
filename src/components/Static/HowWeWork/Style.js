@@ -16,6 +16,10 @@ export const HowWeWorkEl = Styled.div`
                #title-layout {
                   margin-bottom: 28px;
                }
+
+               p#read-more {
+                  display: inline-block;
+               }
             }
 
             .rightSide {
