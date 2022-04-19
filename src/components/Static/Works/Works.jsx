@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { ImageGrid } from "../../Styles/ImageGrid";
-import PortfolioWork from "../PortfolioWork/PortfolioWork";
 import { WorksEl } from "./Style";
-import WorkImage1 from "../../../assets/Images/work-1.png";
-import WorkImage2 from "../../../assets/Images/work-2.png";
-import WorkImage3 from "../../../assets/Images/work-3.png";
-import WorkImage4 from "../../../assets/Images/work-4.png";
 import Select from "../../Styles/Select";
 import Categories from "./Categories";
 
-export const Works = () => {
+export const Works = ({ images }) => {
    const [mobile, setMobile] = useState(false);
 
    const getWindowSize = () => {
@@ -36,7 +31,7 @@ export const Works = () => {
    };
 
    return (
-      <WorksEl>
+      <WorksEl id="works">
          {mobile ? (
             <Select
                classType="dark"
@@ -53,36 +48,7 @@ export const Works = () => {
          ) : (
             <Categories categoryItemsHandler={categoryItemsHandler} />
          )}
-         <ImageGrid
-            images={
-               <>
-                  <PortfolioWork
-                     id="work1"
-                     image={WorkImage1}
-                     tag="Design"
-                     name="SOFA"
-                  />
-                  <PortfolioWork
-                     id="work2"
-                     image={WorkImage2}
-                     tag="Branding"
-                     name="KeyBoard"
-                  />
-                  <PortfolioWork
-                     id="work3"
-                     image={WorkImage3}
-                     tag="Illustration"
-                     name="Work Media"
-                  />
-                  <PortfolioWork
-                     id="work4"
-                     image={WorkImage4}
-                     tag="Motion"
-                     name="DDDone"
-                  />
-               </>
-            }
-         />
+         <ImageGrid images={images} />
       </WorksEl>
    );
 };
