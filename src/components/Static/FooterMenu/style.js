@@ -9,6 +9,15 @@ export const FooterMenuEl = Styled.div`
    .footer-menu--ul {
       display: flex;
 
+      #footer-menu--col {
+         .footer-menu--items {
+            a {
+               margin-bottom: 5px;
+               display: block;
+            }
+         }        
+      }
+
       #footer-menu--col:last-child {
          margin-left: 200px;
       }

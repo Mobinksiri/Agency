@@ -4,6 +4,7 @@ import Button from "../../Styles/Button";
 import { Heading } from "../../Styles/Heading";
 import PosterImage from "../../../assets/Images/poster.png";
 import { Device } from "../../Styles/Devices";
+import { Link } from "react-router-dom";
 
 const PosterEl = Styled.div`
    display: flex;
@@ -71,7 +72,9 @@ const Poster = () => {
                elementType="text"
                color="light-gray"
             />
-            <Button type="secondary" padding="large" text="Contact Us" />
+            <Link to="/contact">
+               <Button type="secondary" padding="large" text="Contact Us" />
+            </Link>
          </div>
          <img src={PosterImage} alt="Contact Us" />
       </PosterEl>

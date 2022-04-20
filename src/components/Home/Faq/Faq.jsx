@@ -5,6 +5,7 @@ import TwoColumn from "../../Styles/TwoColumn";
 import { TitleLayout } from "../../Static/TitleLayout/TitleLayout";
 import { Heading } from "../../Styles/Heading";
 import FaqColumn from "../../Static/FaqColumn/FaqColumn";
+import { Link } from "react-router-dom";
 
 const Faq = () => {
    return (
@@ -24,12 +25,14 @@ const Faq = () => {
                         paragraphElementType="text"
                         paragraphColor="dark-gray"
                      />
-                     <Heading
-                        text="Contact Us"
-                        element="p"
-                        elementType="text"
-                        color="dark"
-                     />
+                     <Link to="/contact">
+                        <Heading
+                           text="Contact Us"
+                           element="p"
+                           elementType="text"
+                           color="dark"
+                        />
+                     </Link>
                   </>
                }
                right={<FaqColumn theme="light" />}

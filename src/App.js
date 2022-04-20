@@ -7,6 +7,7 @@ import ScrollToTop from "./components/Static/ScrollToTop";
 import Services from "./pages/Services";
 import Portfolio from "./pages/Portfolio";
 import Blog from "./pages/Blog";
+import Contact from "./pages/Contact";
 
 const AppEl = Styled.div`
 
@@ -22,6 +23,7 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/contact" element={<Contact />} />
          </Routes>
       </AppEl>
    );

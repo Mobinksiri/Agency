@@ -3,6 +3,7 @@ import Styled from "styled-components";
 import { Heading } from "../../Styles/Heading";
 import Button from "../../Styles/Button";
 import { Device } from "../../Styles/Devices";
+import { Link } from "react-router-dom";
 
 const PriceEl = Styled.div`
       background-color: ${(props) => props.background};
@@ -101,11 +102,13 @@ const PriceItem = ({ active, popular, title, price, paragraph, tags, id }) => {
             color="dark-gray"
          />
          <div className="price-tags">{tags}</div>
-         <Button
-            text="Contact Us"
-            padding="large"
-            type={active ? "light-primary" : "secondary"}
-         />
+         <Link to="/contact">
+            <Button
+               text="Contact Us"
+               padding="large"
+               type={active ? "light-primary" : "secondary"}
+            />
+         </Link>
       </PriceEl>
    );
 };

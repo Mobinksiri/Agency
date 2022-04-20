@@ -131,14 +131,14 @@ const Articles = () => {
                         body="Performance marketing agencies specializev"
                         date="7 Dec, 2021"
                         image={Image6}
-                        width="49%"
+                        width="48.5%"
                      />
                      <BlogPost
                         title="Design"
                         body="Digital marketing channels"
                         date="23 Nov, 2021"
                         image={Image5}
-                        width="49%"
+                        width="48.5%"
                      />
                   </>
                }

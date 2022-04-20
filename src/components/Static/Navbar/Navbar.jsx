@@ -68,7 +68,9 @@ export const Navbar = () => {
                </li>
             </div>
             <div className="navbar-contact">
-               <Button type="outline" text="Contact" padding="large" />
+               <Link to="/contact">
+                  <Button type="outline" text="Contact" padding="large" />
+               </Link>
             </div>
          </>
       );

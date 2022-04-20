@@ -24,12 +24,15 @@ const FooterMenu = () => {
                            color="dark"
                         />
                      </Link>
-                     <Heading
-                        text="Service"
-                        element="p"
-                        elementType="text"
-                        color="dark"
-                     />
+                     <Link to="/services">
+                        <Heading
+                           text="Service"
+                           element="p"
+                           elementType="text"
+                           color="dark"
+                        />
+                     </Link>
+
                      <Link to="/blog">
                         <Heading
                            text="Blog"
@@ -38,13 +41,14 @@ const FooterMenu = () => {
                            color="dark"
                         />
                      </Link>
-
-                     <Heading
-                        text="Contact"
-                        element="p"
-                        elementType="text"
-                        color="dark"
-                     />
+                     <Link to="/contact">
+                        <Heading
+                           text="Contact"
+                           element="p"
+                           elementType="text"
+                           color="dark"
+                        />
+                     </Link>
                   </>
                }
             />

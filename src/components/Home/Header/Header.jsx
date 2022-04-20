@@ -8,6 +8,7 @@ import HeaderStar from "../../../assets/Images/home-header--start.png";
 import { TitleLayout } from "../../Static/TitleLayout/TitleLayout";
 import Button from "../../Styles/Button";
 import { Heading } from "../../Styles/Heading";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
    return (
@@ -32,17 +33,22 @@ export const Header = () => {
                         />
                      </div>
                      <div className="header-description--buttons">
-                        <Button
-                           text="How We Work"
-                           type="light-primary"
-                           padding="small"
-                        />
-                        <Heading
-                           element="p"
-                           elementType="text"
-                           color="light"
-                           text="Contact Us"
-                        />
+                        <Link to="/services">
+                           <Button
+                              text="How We Work"
+                              type="light-primary"
+                              padding="small"
+                           />
+                        </Link>
+
+                        <Link to="/contact">
+                           <Heading
+                              element="p"
+                              elementType="text"
+                              color="light"
+                              text="Contact Us"
+                           />
+                        </Link>
                      </div>
                      <div className="header-description--profile">
                         <div className="header-description--profile---image">
