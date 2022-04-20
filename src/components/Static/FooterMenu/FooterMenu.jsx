@@ -24,19 +24,21 @@ const FooterMenu = () => {
                            color="dark"
                         />
                      </Link>
-
                      <Heading
                         text="Service"
                         element="p"
                         elementType="text"
                         color="dark"
                      />
-                     <Heading
-                        text="Blog"
-                        element="p"
-                        elementType="text"
-                        color="dark"
-                     />
+                     <Link to="/blog">
+                        <Heading
+                           text="Blog"
+                           element="p"
+                           elementType="text"
+                           color="dark"
+                        />
+                     </Link>
+
                      <Heading
                         text="Contact"
                         element="p"
@@ -50,30 +52,38 @@ const FooterMenu = () => {
                title="Service"
                menuItems={
                   <>
-                     <Heading
-                        text="Design"
-                        element="p"
-                        elementType="text"
-                        color="dark"
-                     />
-                     <Heading
-                        text="Development"
-                        element="p"
-                        elementType="text"
-                        color="dark"
-                     />
-                     <Heading
-                        text="Marketing"
-                        element="p"
-                        elementType="text"
-                        color="dark"
-                     />
-                     <Heading
-                        text="See More"
-                        element="p"
-                        elementType="text"
-                        color="dark"
-                     />
+                     <Link to="/services">
+                        <Heading
+                           text="Design"
+                           element="p"
+                           elementType="text"
+                           color="dark"
+                        />
+                     </Link>
+                     <Link to="/services">
+                        <Heading
+                           text="Development"
+                           element="p"
+                           elementType="text"
+                           color="dark"
+                        />
+                     </Link>
+                     <Link to="/services">
+                        <Heading
+                           text="Marketing"
+                           element="p"
+                           elementType="text"
+                           color="dark"
+                        />
+                     </Link>
+                     <Link to="/services">
+                        <Heading
+                           text="See More"
+                           element="p"
+                           elementType="text"
+                           color="dark"
+                        />
+                     </Link>
                   </>
                }
             />

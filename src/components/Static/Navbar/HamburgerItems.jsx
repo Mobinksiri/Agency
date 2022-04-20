@@ -55,12 +55,14 @@ export const HamburgerItems = ({ active, hamburgerActiveHandler }) => {
                />
             </li>
             <li className="hamburger-item">
-               <Heading
-                  element="p"
-                  elementType="text"
-                  color="light"
-                  text="Blog"
-               />
+               <Link to="/blog">
+                  <Heading
+                     element="p"
+                     elementType="text"
+                     color="light"
+                     text="Blog"
+                  />
+               </Link>
             </li>
             <li className="hamburger-item">
                <Button type="outline" text="Contact" padding="large" />

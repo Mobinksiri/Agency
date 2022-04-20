@@ -7,6 +7,7 @@ import serviceImage1 from "../../../assets/Images/home-second--service.png";
 import serviceImage2 from "../../../assets/Images/home-second--service---2.png";
 import serviceImage3 from "../../../assets/Images/home-second--service---3.png";
 import { Heading } from "../../Styles/Heading";
+import { Link } from "react-router-dom";
 
 const SecondService = () => {
    return (
@@ -45,12 +46,14 @@ const SecondService = () => {
                                  color="dark-gray"
                               />
                            </div>
-                           <Heading
-                              text="Learn More"
-                              element="p"
-                              elementType="text"
-                              color="dark"
-                           />
+                           <Link to="/services">
+                              <Heading
+                                 text="Learn More"
+                                 element="p"
+                                 elementType="text"
+                                 color="dark"
+                              />
+                           </Link>
                         </div>
                         <div className="development column">
                            <div className="information">
@@ -68,12 +71,14 @@ const SecondService = () => {
                                  color="dark-gray"
                               />
                            </div>
-                           <Heading
-                              text="Discover More"
-                              element="p"
-                              elementType="text"
-                              color="dark"
-                           />
+                           <Link to="/services">
+                              <Heading
+                                 text="Discover More"
+                                 element="p"
+                                 elementType="text"
+                                 color="dark"
+                              />
+                           </Link>
                         </div>
                         <div className="marketing column">
                            <div className="information">
@@ -91,12 +96,14 @@ const SecondService = () => {
                                  color="dark-gray"
                               />
                            </div>
-                           <Heading
-                              text="Explore Now"
-                              element="p"
-                              elementType="text"
-                              color="dark"
-                           />
+                           <Link to="/services">
+                              <Heading
+                                 text="Explore Now"
+                                 element="p"
+                                 elementType="text"
+                                 color="dark"
+                              />
+                           </Link>
                         </div>
                      </>
                   }

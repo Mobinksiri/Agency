@@ -9,6 +9,7 @@ import WorkImage2 from "../../../assets/Images/work-2.png";
 import WorkImage3 from "../../../assets/Images/work-3.png";
 import WorkImage4 from "../../../assets/Images/work-4.png";
 import PortfolioWork from "../../Static/PortfolioWork/PortfolioWork";
+import { Link } from "react-router-dom";
 
 const Portfolio = () => {
    return (
@@ -56,7 +57,9 @@ const Portfolio = () => {
                }
             />
             <div className="explore-button">
-               <Button type="outline" text="Explore More" padding="large" />
+               <Link to="/portfolio">
+                  <Button type="outline" text="Explore More" padding="large" />
+               </Link>
             </div>
          </Container>
       </PortfolioEl>

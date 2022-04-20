@@ -7,6 +7,7 @@ import ServiceProfile from "../../../assets/Images/home-service--profile.png";
 import { TitleLayout } from "../../Static/TitleLayout/TitleLayout";
 import { Heading } from "../../Styles/Heading";
 import Button from "../../Styles/Button";
+import { Link } from "react-router-dom";
 
 const Service = () => {
    return (
@@ -52,11 +53,13 @@ const Service = () => {
                         </div>
                      </div>
                      <div className="explore">
-                        <Button
-                           type="secondary"
-                           text="Explore"
-                           padding="large"
-                        />
+                        <Link to="/services">
+                           <Button
+                              type="secondary"
+                              text="Explore"
+                              padding="large"
+                           />
+                        </Link>
                      </div>
                   </>
                }

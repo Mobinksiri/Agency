@@ -10,6 +10,7 @@ import PostImage1 from "../../../assets/Images/post-1.png";
 import PostImage2 from "../../../assets/Images/post-2.png";
 import PostImage3 from "../../../assets/Images/post-3.png";
 import BlogPost from "../../Static/BlogPosts/BlogPost";
+import { Link } from "react-router-dom";
 
 const OurBlog = () => {
    return (
@@ -31,11 +32,13 @@ const OurBlog = () => {
                   />
                }
                right={
-                  <Button
-                     type="secondary"
-                     padding="large"
-                     text="Discover All"
-                  />
+                  <Link to="/blog">
+                     <Button
+                        type="secondary"
+                        padding="large"
+                        text="Discover All"
+                     />
+                  </Link>
                }
             />
             <BlogPosts

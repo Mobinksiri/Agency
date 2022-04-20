@@ -5,9 +5,9 @@ import { Heading } from "../../Styles/Heading";
 import Input from "../../Styles/Input";
 import Button from "../../Styles/Button";
 
-const Newsletter = () => {
+const Newsletter = ({ children }) => {
    return (
-      <NewsletterEl>
+      <NewsletterEl id="newsLetters">
          <Container>
             <div className="newsletter-box">
                <Heading
@@ -25,6 +25,7 @@ const Newsletter = () => {
                   <Button padding="large" text="Subscribe" type="secondary" />
                </div>
             </div>
+            {children}
          </Container>
       </NewsletterEl>
    );

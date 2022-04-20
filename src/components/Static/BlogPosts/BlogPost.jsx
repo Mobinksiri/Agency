@@ -9,12 +9,15 @@ const BlogPostEl = Styled.div`
    
       .image {
          width: 100%;
+         height: 224px;
          margin-bottom: 26px;
          border-radius: 6px;
          overflow: hidden;
 
          img {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
          }
       }
 
@@ -24,6 +27,7 @@ const BlogPostEl = Styled.div`
 
       h4 {
          margin-bottom: 15px;
+         max-width: 90%;
       }
 
       @media screen and ${Device.laptop} {
@@ -37,7 +41,7 @@ const BlogPostEl = Styled.div`
 
 const BlogPost = ({ title, image, body, date, width }) => {
    return (
-      <BlogPostEl width={width}>
+      <BlogPostEl id="blog-post" width={width}>
          <div className="image">
             <img src={image} alt={title} />
          </div>

@@ -4,6 +4,7 @@ import { Container } from "../../Styles/Container";
 import { TitleLayout } from "../../Static/TitleLayout/TitleLayout";
 import EventsGrid from "./EventsGrid";
 import Button from "../../Styles/Button";
+import { Link } from "react-router-dom";
 
 const Events = () => {
    return (
@@ -22,7 +23,9 @@ const Events = () => {
             />
             <EventsGrid />
             <div className="button">
-               <Button type="outline" padding="small" text="Explore More" />
+               <Link to="/portfolio">
+                  <Button type="outline" padding="small" text="Explore More" />
+               </Link>
             </div>
          </Container>
       </EventsEl>

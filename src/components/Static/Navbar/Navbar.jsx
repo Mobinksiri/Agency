@@ -5,7 +5,7 @@ import Logo from "../../../assets/Images/logo.png";
 import Button from "../../../components/Styles/Button";
 import { Heading } from "../../../components/Styles/Heading";
 import { HamburgerItems } from "./HamburgerItems";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
    const [hamburger, setHamburger] = useState(false);
@@ -57,12 +57,14 @@ export const Navbar = () => {
                   />
                </li>
                <li className="navbar-ul--item">
-                  <Heading
-                     element="p"
-                     elementType="text"
-                     color="light"
-                     text="Blog"
-                  />
+                  <Link to="/blog">
+                     <Heading
+                        element="p"
+                        elementType="text"
+                        color="light"
+                        text="Blog"
+                     />
+                  </Link>
                </li>
             </div>
             <div className="navbar-contact">
