@@ -4,7 +4,13 @@ import { WorksEl } from "./Style";
 import Select from "../../Styles/Select";
 import Categories from "./Categories";
 
-export const Works = ({ images }) => {
+export const Works = ({
+   images,
+   categories,
+   categoryHandler,
+   categoryIndexHandler,
+   selectChangeHandler,
+}) => {
    const [mobile, setMobile] = useState(false);
 
    const getWindowSize = () => {
@@ -20,20 +26,11 @@ export const Works = ({ images }) => {
       window.addEventListener("resize", getWindowSize);
    }, []);
 
-   const categoryItemsHandler = (e) => {
-      const categories = document.querySelector(".categories");
-      const categoriesArray = Array.from(categories.children);
-      const activeSpan = e.target;
-      categoriesArray.map((category) => {
-         category.className = "category";
-      });
-      activeSpan.classList.add("category-active");
-   };
-
    return (
       <WorksEl id="works">
          {mobile ? (
             <Select
+               selectChangeHandler={selectChangeHandler}
                classType="dark"
                options={
                   <>
@@ -46,7 +43,13 @@ export const Works = ({ images }) => {
                }
             />
          ) : (
-            <Categories categoryItemsHandler={categoryItemsHandler} />
+            <Categories
+               categories={categories}
+               categoryHandler={(e) => {
+                  categoryHandler(e);
+               }}
+               categoryIndexHandler={categoryIndexHandler}
+            />
          )}
          <ImageGrid images={images} />
       </WorksEl>

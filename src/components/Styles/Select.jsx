@@ -25,7 +25,7 @@ const SelectEl = Styled.select`
       margin-bottom: 38px;
 `;
 
-const Select = ({ options, classType }) => {
+const Select = ({ options, classType, selectChangeHandler }) => {
    const [border, setBorder] = useState();
 
    const getClass = () => {
@@ -40,7 +40,11 @@ const Select = ({ options, classType }) => {
       getClass();
    }, []);
 
-   return <SelectEl border={border}>{options}</SelectEl>;
+   return (
+      <SelectEl onChange={selectChangeHandler} border={border}>
+         {options}
+      </SelectEl>
+   );
 };
 
 export default Select;

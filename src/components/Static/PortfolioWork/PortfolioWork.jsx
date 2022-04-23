@@ -1,9 +1,10 @@
 import React from "react";
 import Styled from "styled-components";
 import { Device } from "../../Styles/Devices";
+import { motion } from "framer-motion";
 import { Heading } from "../../Styles/Heading";
 
-const Work = Styled.div`
+const Work = Styled(motion.div)`
    width: 100%;
    position: relative;
    border-radius: 6px;
@@ -50,7 +51,13 @@ const Work = Styled.div`
 
 const PortfolioWork = ({ image, tag, name, id }) => {
    return (
-      <Work id={id}>
+      <Work
+         animate={{ opacity: 1, scale: 1 }}
+         initial={{ opacity: 0, scale: 0.96 }}
+         exit={{ opacity: 0, scale: 0.96 }}
+         transition={{ duration: 0.25 }}
+         id={id}
+      >
          <img src={image} alt="Work" />
          <div className="description">
             <Heading text={tag} element="p" elementType="text" color="dark" />

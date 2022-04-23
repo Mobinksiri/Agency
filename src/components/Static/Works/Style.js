@@ -10,12 +10,33 @@ export const WorksEl = Styled.div`
       flex-wrap: wrap;
       user-select: none;
       margin-bottom: 48px;
+      flex-direction: row;
+
+      div:nth-of-type(1) {
+         order: 2;
+      }
+      div:nth-of-type(2) {
+         order: 3;
+      }
+      div:nth-of-type(3) {
+         order: 4;
+      }
+      div:nth-of-type(4) {
+         order: 5;
+      }
+      div:last-child {
+         order: 1;
+      }
 
       .category {
          margin: 0 30px; 
          position: relative;
          cursor: pointer;
          padding: 20px;
+
+         .category-item {
+            display: inline-block;
+         }
 
          p, a {
             pointer-events: none;
@@ -31,7 +52,7 @@ export const WorksEl = Styled.div`
 
       .category-active {
 
-         p {
+         p, a {
             color: var(--text-light);
          }
       }
@@ -39,19 +60,19 @@ export const WorksEl = Styled.div`
 
    #image-grid {
 
-      #work1 {
+      div:nth-of-type(1) {
          grid-column: 1/6;
          grid-row: 1/2;
       }
-      #work2 {
+      div:nth-of-type(2) {
          grid-column: 6/13;
          grid-row: 1/2;
       }
-      #work3 {
+      div:nth-of-type(3) {
          grid-column: 1/8;
          grid-row: 2/3;
       }
-      #work4 {
+      div:nth-of-type(4) {
          grid-column: 8/13;
          grid-row: 2/3;
       }
@@ -60,19 +81,19 @@ export const WorksEl = Styled.div`
    @media screen and ${Device.laptop} {
       #image-grid {
 
-         #work1 {
+         div:nth-of-type(1) {
             grid-column: 1/7;
             grid-row: 1/2;
          }
-         #work2 {
+         div:nth-of-type(2) {
             grid-column: 7/13;
             grid-row: 1/2;
          }
-         #work3 {
+         div:nth-of-type(3) {
             grid-column: 1/7;
             grid-row: 2/3;
          }
-         #work4 {
+         div:nth-of-type(4) {
             grid-column: 7/13;
             grid-row: 2/3;
          }
@@ -87,20 +108,20 @@ export const WorksEl = Styled.div`
    @media screen and (max-width: 650px) {
       #image-grid {
 
-         #work1 {
+         div:nth-of-type(1) {
             grid-column: 1/7;
             grid-row: 1/2;
          }
 
-         #work2 {
+         div:nth-of-type(2) {
             grid-column: 1/7;
             grid-row: 2/3;
          }
-         #work3 {
+         div:nth-of-type(3) {
             grid-column: 1/7;
             grid-row: 3/4;
          }
-         #work4 {
+         div:nth-of-type(4) {
             grid-column: 1/7;
             grid-row: 4/5;
          }
@@ -111,20 +132,20 @@ export const WorksEl = Styled.div`
       #image-grid {
          grid-auto-rows: 416px;
 
-         #work1 {
+         div:nth-of-type(1) {
             grid-column: 1/5;
             grid-row: 1/2;
          }
 
-         #work2 {
+         div:nth-of-type(2) {
             grid-column: 1/5;
             grid-row: 2/3;
          }
-         #work3 {
+         div:nth-of-type(3) {
             grid-column: 1/5;
             grid-row: 3/4;
          }
-         #work4 {
+         div:nth-of-type(4) {
             grid-column: 1/5;
             grid-row: 4/5;
          }

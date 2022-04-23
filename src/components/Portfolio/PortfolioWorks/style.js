@@ -32,41 +32,58 @@ export const PortfolioWorksEl = Styled.div`
       }
 
       #image-grid {
-         #work1 {
+         
+         div:nth-of-type(1) {
             grid-column: 1/5;
             grid-row: 1/2;
          }
-         #work2 {
+         div:nth-of-type(2) {
             grid-column: 5/9;
             grid-row: 1/2;
          }
-         #work3 {
+         div:nth-of-type(3) {
             grid-column: 9/13;
             grid-row: 1/2;
          }
-         #work4 {
+         div:nth-of-type(4) {
             grid-column: 1/5;
             grid-row: 2/3;
          }
-         #work5 {
+         div:nth-of-type(5) {
             grid-column: 5/9;
             grid-row: 2/3;
          }
-         #work6 {
+         div:nth-of-type(6) {
             grid-column: 9/13;
             grid-row: 2/3;
          }
-         #work7 {
+         div:nth-of-type(7) {
             grid-column: 1/5;
             grid-row: 3/4;
          }
-         #work8 {
+         div:nth-of-type(8) {
             grid-column: 5/9;
             grid-row: 3/4;
          }
-         #work9 {
+         div:nth-of-type(9) {
             grid-column: 9/13;
             grid-row: 3/4;
+         }
+         div:nth-of-type(10) {
+            grid-column: 1/5;
+            grid-row: 4/5;
+         }
+         div:nth-of-type(11) {
+            grid-column: 5/9;
+            grid-row: 4/5;
+         }
+         div:nth-of-type(12) {
+            grid-column: 9/13;
+            grid-row: 4/5;
+         }
+         div:nth-of-type(13) {
+            grid-column: 1/5;
+            grid-row: 5/6;
          }
       }
    }
@@ -74,41 +91,57 @@ export const PortfolioWorksEl = Styled.div`
    @media screen and ${Device.laptop} {
       #works {
          #image-grid {
-            #work1 {
+            div:nth-of-type(1) {
                grid-column: 1/7;
                grid-row: 1/2;
             }
-            #work2 {
+            div:nth-of-type(2) {
                grid-column: 7/13;
                grid-row: 1/2;
             }
-            #work3 {
+            div:nth-of-type(3) {
                grid-column: 1/7;
                grid-row: 2/3;
             }
-            #work4 {
+            div:nth-of-type(4) {
                grid-column: 7/13;
                grid-row: 2/3;
             }
-            #work5 {
+            div:nth-of-type(5) {
                grid-column: 1/7;
                grid-row: 3/4;
             }
-            #work6 {
+            div:nth-of-type(6) {
                grid-column: 7/13;
                grid-row: 3/4;
             }
-            #work7 {
+            div:nth-of-type(7) {
                grid-column: 1/7;
                grid-row: 4/5;
             }
-            #work8 {
+            div:nth-of-type(8) {
                grid-column: 7/13;
                grid-row: 4/5;
             }
-            #work9 {
+            div:nth-of-type(9) {
                grid-column: 1/7;
                grid-row: 5/6;
+            }
+            div:nth-of-type(10) {
+               grid-column: 7/13;
+               grid-row: 5/6;
+            }
+            div:nth-of-type(11) {
+               grid-column: 1/7;
+               grid-row: 6/7;
+            }
+            div:nth-of-type(12) {
+               grid-column: 7/13;
+               grid-row: 6/7;
+            }
+            div:nth-of-type(13) {
+               grid-column: 1/7;
+               grid-row: 7/8;
             }
          }
       }
@@ -116,41 +149,57 @@ export const PortfolioWorksEl = Styled.div`
    @media screen and (max-width: 650px) {
       #works {
          #image-grid {
-            #work1 {
+            div:nth-of-type(1) {
                grid-column: 1/7;
                grid-row: 1/2;
             }
-            #work2 {
+            div:nth-of-type(2) {
                grid-column: 1/7;
                grid-row: 2/3;
             }
-            #work3 {
+            div:nth-of-type(3) {
                grid-column: 1/7;
                grid-row: 3/4;
             }
-            #work4 {
+            div:nth-of-type(4) {
                grid-column: 1/7;
                grid-row: 4/5;
             }
-            #work5 {
+            div:nth-of-type(5) {
                grid-column: 1/7;
                grid-row: 5/6;
             }
-            #work6 {
+            div:nth-of-type(6) {
                grid-column: 1/7;
                grid-row: 6/7;
             }
-            #work7 {
+            div:nth-of-type(7) {
                grid-column: 1/7;
                grid-row: 7/8;
             }
-            #work8 {
+            div:nth-of-type(8) {
                grid-column: 1/7;
                grid-row: 8/9;
             }
-            #work9 {
+            div:nth-of-type(9) {
                grid-column: 1/7;
                grid-row: 9/10;
+            }
+            div:nth-of-type(10) {
+               grid-column: 1/7;
+               grid-row: 10/11;
+            }
+            div:nth-of-type(11) {
+               grid-column: 1/7;
+               grid-row: 11/12;
+            }
+            div:nth-of-type(12) {
+               grid-column: 1/7;
+               grid-row: 12/13;
+            }
+            div:nth-of-type(13) {
+               grid-column: 1/7;
+               grid-row: 13/14;
             }
          }
       }
@@ -158,41 +207,44 @@ export const PortfolioWorksEl = Styled.div`
    @media screen and ${Device.mobileL} {
       #works {
          #image-grid {
-            #work1 {
+            div:nth-of-type(1) {
                grid-column: 1/5;
-               grid-row: 1/2;
             }
-            #work2 {
+            div:nth-of-type(2) {
                grid-column: 1/5;
-               grid-row: 2/3;
             }
-            #work3 {
+            div:nth-of-type(3) {
                grid-column: 1/5;
-               grid-row: 3/4;
             }
-            #work4 {
+            div:nth-of-type(4) {
                grid-column: 1/5;
-               grid-row: 4/5;
             }
-            #work5 {
+            div:nth-of-type(5) {
                grid-column: 1/5;
-               grid-row: 5/6;
             }
-            #work6 {
+            div:nth-of-type(6) {
                grid-column: 1/5;
-               grid-row: 6/7;
             }
-            #work7 {
+            div:nth-of-type(7) {
                grid-column: 1/5;
-               grid-row: 7/8;
             }
-            #work8 {
+            div:nth-of-type(8) {
                grid-column: 1/5;
-               grid-row: 8/9;
             }
-            #work9 {
+            div:nth-of-type(9) {
                grid-column: 1/5;
-               grid-row: 9/10;
+            }
+            div:nth-of-type(10) {
+               grid-column: 1/5;
+            }
+            div:nth-of-type(11) {
+               grid-column: 1/5;
+            }
+            div:nth-of-type(12) {
+               grid-column: 1/5;
+            }
+            div:nth-of-type(13) {
+               grid-column: 1/5;
             }
          }
       }
