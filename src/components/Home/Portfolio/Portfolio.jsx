@@ -12,6 +12,7 @@ import PortfolioWork from "../../Static/PortfolioWork/PortfolioWork";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { Heading } from "../../Styles/Heading";
+import Loading from "../../Static/Loading/Loading";
 
 const Portfolio = () => {
    const [posts, setPosts] = useState();
@@ -33,6 +34,12 @@ const Portfolio = () => {
                categoriesArray.push(item);
             });
             setCategories(categoriesArray);
+         })
+         .catch((err) => {
+            alert(
+               "Work List not uploaded in your location!! please turn on your vpn :D"
+            );
+            alert(err);
          });
    };
 
@@ -130,7 +137,7 @@ const Portfolio = () => {
                               />
                            ))
                      ) : (
-                        <div>Loading ...</div>
+                        <Loading theme="light" />
                      )}
                   </>
                }

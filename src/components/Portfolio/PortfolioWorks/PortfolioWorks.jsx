@@ -14,6 +14,7 @@ import PortfolioWork from "../../Static/PortfolioWork/PortfolioWork";
 import { PortfolioWorksEl } from "./style";
 import PageNumbers from "../PageNumbers/PageNumbers";
 import axios from "axios";
+import Loading from "../../Static/Loading/Loading";
 
 const PortfolioWorks = () => {
    const [posts, setPosts] = useState();
@@ -36,6 +37,12 @@ const PortfolioWorks = () => {
                categoriesArray.push(item);
             });
             setCategories(categoriesArray);
+         })
+         .catch((err) => {
+            alert(
+               "Work List not uploaded in your location!! please turn on your vpn :D"
+            );
+            alert(err);
          });
    };
 
@@ -118,7 +125,7 @@ const PortfolioWorks = () => {
                            />
                         ))
                      ) : (
-                        <div>Loading ...</div>
+                        <Loading theme="dark" />
                      )}
                   </>
                }

@@ -42,6 +42,7 @@ const OurBlog = () => {
                }
             />
             <BlogPosts
+               id="blog-post--1"
                posts={
                   <>
                      <BlogPost

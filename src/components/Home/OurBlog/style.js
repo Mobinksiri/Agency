@@ -41,6 +41,30 @@ export const OurBlogEl = Styled.div`
       }
    }
 
+   @media screen and (max-width: 700px) {
+      #blog-post--1 {
+         #blog-post {
+            margin-bottom: 50px;
+
+            .image {
+               height: 356px;
+            }
+         }
+      }
+   }
+
+   @media screen and (max-width: 500px) {
+      #blog-post--1 {
+         #blog-post {
+            margin-bottom: 50px;
+
+            .image {
+               height: 224px;
+            }
+         }
+      }
+   }
+
    @media screen and (max-width: 600px) {
       #container {
          #two-column {
