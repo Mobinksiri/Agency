@@ -15,17 +15,19 @@ import { PortfolioWorksEl } from "./style";
 import PageNumbers from "../PageNumbers/PageNumbers";
 import axios from "axios";
 import Loading from "../../Static/Loading/Loading";
+import { useNavigate } from "react-router-dom";
 
 const PortfolioWorks = () => {
    const [posts, setPosts] = useState();
    const [filteredDate, setFilteredDate] = useState();
    const [categories, setCategories] = useState([]);
 
+   const navigate = useNavigate();
+
    const getData = () => {
       axios
          .get("https://agency-2c3ae-default-rtdb.firebaseio.com/Products.json")
          .then((response) => {
-            console.log(response);
             setPosts(response.data);
             const categoriesItems = response.data.map((category) => {
                return category.category;
@@ -82,7 +84,6 @@ const PortfolioWorks = () => {
    };
 
    const selectChangeHandler = (e) => {
-      console.log(e);
       const categoryName = e.target.value;
       const filteredDate = posts.filter((item) => {
          return item.category === categoryName;
@@ -92,6 +93,10 @@ const PortfolioWorks = () => {
       } else {
          setFilteredDate(filteredDate);
       }
+   };
+
+   const workHandler = (e, id) => {
+      navigate("/works/" + id);
    };
 
    return (
@@ -107,6 +112,7 @@ const PortfolioWorks = () => {
                      {filteredDate ? (
                         filteredDate.map((post) => (
                            <PortfolioWork
+                              click={(e) => workHandler(e, post.id)}
                               key={post.id}
                               id={`work work${post.id}`}
                               image={post.titleImage}
@@ -118,6 +124,7 @@ const PortfolioWorks = () => {
                         posts.map((post) => (
                            <PortfolioWork
                               key={post.id}
+                              click={(e) => workHandler(e, post.id)}
                               id={`work work${post.id}`}
                               image={post.titleImage}
                               tag={post.category}

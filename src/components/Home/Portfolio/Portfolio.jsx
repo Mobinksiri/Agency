@@ -9,15 +9,18 @@ import Button from "../../Styles/Button";
 // import WorkImage3 from "../../../assets/Images/work-3.png";
 // import WorkImage4 from "../../../assets/Images/work-4.png";
 import PortfolioWork from "../../Static/PortfolioWork/PortfolioWork";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { Heading } from "../../Styles/Heading";
+// import { Heading } from "../../Styles/Heading";
 import Loading from "../../Static/Loading/Loading";
+import Products from "../../../Projects-2.json";
+import { Navigate } from "react-router-dom";
 
 const Portfolio = () => {
    const [posts, setPosts] = useState();
    const [filteredDate, setFilteredDate] = useState();
    const [categories, setCategories] = useState([]);
+   const navigate = useNavigate();
 
    const getData = () => {
       axios
@@ -91,6 +94,10 @@ const Portfolio = () => {
       }
    };
 
+   const portfolioHandler = (e, id) => {
+      navigate("/works/" + id);
+   };
+
    return (
       <PortfolioEl>
          <Container>
@@ -117,6 +124,7 @@ const Portfolio = () => {
                            .slice(0, 4)
                            .map((post) => (
                               <PortfolioWork
+                                 click={(e) => portfolioHandler(e, post.id)}
                                  key={post.id}
                                  id={`work work${post.id}`}
                                  image={post.titleImage}
@@ -129,6 +137,7 @@ const Portfolio = () => {
                            .slice(0, 4)
                            .map((post) => (
                               <PortfolioWork
+                                 click={(e) => portfolioHandler(e, post.id)}
                                  key={post.id}
                                  id={`work work${post.id}`}
                                  image={post.titleImage}

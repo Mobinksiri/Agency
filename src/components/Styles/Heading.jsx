@@ -15,7 +15,7 @@ const HeadingStyle = Styled(Title)`
    color: ${(props) => props.textColor};
 `;
 
-export const Heading = ({ text, color, element, elementType, id }) => {
+export const Heading = ({ text, color, element, elementType, id, click }) => {
    const [weight, setWeight] = useState();
    const [size, setSize] = useState();
    const [lineHeight, setLineHeight] = useState();
@@ -134,6 +134,7 @@ export const Heading = ({ text, color, element, elementType, id }) => {
 
    return (
       <HeadingStyle
+         onClick={click}
          as={element}
          weight={weight}
          size={size}

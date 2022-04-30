@@ -10,6 +10,8 @@ const Work = Styled(motion.div)`
    border-radius: 6px;
    overflow: hidden;
    padding: 32px;
+   transform: scale(1);
+   cursor: pointer;
 
    img {
       width: 100%;
@@ -49,7 +51,7 @@ const Work = Styled(motion.div)`
 
 `;
 
-const PortfolioWork = ({ image, tag, name, id }) => {
+const PortfolioWork = ({ image, tag, name, id, click }) => {
    return (
       <Work
          animate={{ opacity: 1, scale: 1 }}
@@ -57,6 +59,7 @@ const PortfolioWork = ({ image, tag, name, id }) => {
          exit={{ opacity: 0, scale: 0.96 }}
          transition={{ duration: 0.25 }}
          id={id}
+         onClick={click}
       >
          <img src={image} alt="Work" />
          <div className="description">

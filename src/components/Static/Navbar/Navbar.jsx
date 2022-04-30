@@ -76,13 +76,9 @@ export const Navbar = () => {
       );
    }
 
-   const getWindowSize = () => {
-      if (window.innerWidth <= 1024) {
-         setHamburger(true);
-      } else {
-         setHamburger(false);
-      }
-   };
+   function getWindowSize() {
+      window.innerWidth <= 1024 ? setHamburger(true) : setHamburger(false);
+   }
 
    useEffect(() => {
       window.addEventListener("resize", getWindowSize);

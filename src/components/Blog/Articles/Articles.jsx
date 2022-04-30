@@ -2,9 +2,9 @@ import React from "react";
 import Styled from "styled-components";
 import BlogPosts from "../../Static/BlogPosts/BlogPosts";
 import Image1 from "../../../assets/Images/post-1.png";
-import Image2 from "../../../assets/Images/post-2.png";
-import Image3 from "../../../assets/Images/post-3.png";
-import Image4 from "../../../assets/Images/post-4.png";
+// import Image2 from "../../../assets/Images/post-2.png";
+// import Image3 from "../../../assets/Images/post-3.png";
+// import Image4 from "../../../assets/Images/post-4.png";
 import Image5 from "../../../assets/Images/post-5.png";
 import Image6 from "../../../assets/Images/post-6.png";
 import Image7 from "../../../assets/Images/post-7.png";
@@ -46,13 +46,6 @@ const ArticlesEl = Styled.div`
 
    #blog-posts--2 {
       padding: 80px 0 70px 0;
-   }
-
-   .button {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      margin-bottom: 80px;
    }
    
    @media screen and ${Device.laptop} {
@@ -195,9 +188,6 @@ const Articles = () => {
                   </>
                }
             />
-            <div className="button">
-               <Button type="secondary" padding="large" text="Load More" />
-            </div>
             <Line />
          </Container>
       </ArticlesEl>

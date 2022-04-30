@@ -8,6 +8,7 @@ import Services from "./pages/Services";
 import Portfolio from "./pages/Portfolio";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import WorkPage from "./pages/WorkPage";
 
 const AppEl = Styled.div`
 
@@ -24,6 +25,7 @@ function App() {
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/works/:id" element={<WorkPage />} />
          </Routes>
       </AppEl>
    );
