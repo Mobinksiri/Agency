@@ -82,7 +82,6 @@ const Portfolio = () => {
    };
 
    const selectChangeHandler = (e) => {
-      console.log(e);
       const categoryName = e.target.value;
       const filteredDate = posts.filter((item) => {
          return item.category === categoryName;

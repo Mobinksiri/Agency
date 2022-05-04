@@ -55,6 +55,18 @@ export const NavbarEl = Styled.div`
          pointer-events: visible;
       }
    }
+
+   @media screen and ${Device.laptop} {
+
+      .navbar-box {         
+         .navbar-ul {
+            display: none;
+         }
+         .navbar-contact {
+            display: none;
+         }
+      }
+   }
    
    @media screen and (max-width: 1200px) {
       .navbar-box {

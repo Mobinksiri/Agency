@@ -70,6 +70,7 @@ export const GetInTouchEl = Styled.div`
          .form-box {
             form {
                padding: 52px 28px 48px 28px;
+               max-width: 100%;
             }
          }
       }

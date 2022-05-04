@@ -3,6 +3,10 @@ import { Device } from "../../Styles/Devices";
 
 export const WorksEl = Styled.div`
    margin-bottom: 64px;
+
+   select {
+      display: none;
+   }
    
    .categories {
       display: flex;
@@ -29,7 +33,7 @@ export const WorksEl = Styled.div`
       }
 
       .category {
-         margin: 0 30px; 
+         margin: 0 15px; 
          position: relative;
          cursor: pointer;
          padding: 20px;
@@ -105,6 +109,7 @@ export const WorksEl = Styled.div`
          grid-auto-rows: 360px;
       }
    }
+   
    @media screen and (max-width: 650px) {
       #image-grid {
 
@@ -129,6 +134,15 @@ export const WorksEl = Styled.div`
    }
 
    @media screen and ${Device.mobileL} {
+
+      .categories {
+         display: none;
+      }
+
+      select {
+         display: block;
+      }
+      
       #image-grid {
          grid-auto-rows: 416px;
 

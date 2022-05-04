@@ -3,10 +3,20 @@ import { Hamburger } from "./HamburgerStyle";
 import { Heading } from "../../Styles/Heading";
 import Button from "../../Styles/Button";
 import { Link } from "react-router-dom";
+import Styled from "styled-components";
+import { Device } from "../../Styles/Devices";
+
+const HamburgerMenuEl = Styled.div`
+   display: none;
+
+   @media screen and ${Device.laptop} {
+      display: block;
+   }
+`;
 
 export const HamburgerItems = ({ active, hamburgerActiveHandler }) => {
    return (
-      <>
+      <HamburgerMenuEl>
          <Hamburger>
             <div
                className={
@@ -70,6 +80,6 @@ export const HamburgerItems = ({ active, hamburgerActiveHandler }) => {
                </Link>
             </li>
          </div>
-      </>
+      </HamburgerMenuEl>
    );
 };

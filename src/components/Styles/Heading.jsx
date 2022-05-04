@@ -2,17 +2,29 @@ import React, { useState, useEffect } from "react";
 import Styled from "styled-components";
 import { Device } from "./Devices";
 
-const Title = Styled.h1`
-   font-style: normal;
-`;
-
-const HeadingStyle = Styled(Title)`
+const HeadingStyle = Styled.h1`
    font-weight: ${(props) => props.weight};
    font-size: ${(props) => props.size};
    line-height: ${(props) => props.lineHeight};
    letter-spacing: ${(props) => props.space};
    text-transform: ${(props) => props.transform};
    color: ${(props) => props.textColor};
+
+   @media screen and ${Device.mobileL} {
+      /* h1 */
+      font-size: ${(props) => (props.elementType === "h1" ? "56px" : null)};
+      line-height: ${(props) => (props.elementType === "h1" ? "64px" : null)};
+      letter-spacing: ${(props) =>
+         props.elementType === "h1" ? "-1px" : null};
+      /* h2 */
+      font-size: ${(props) => (props.elementType === "h2" ? "40px" : null)};
+      line-height: ${(props) => (props.elementType === "h2" ? "48px" : null)};
+      letter-spacing: ${(props) => (props.elementType === "h2" ? "0" : null)};
+      /* h3 */
+      font-size: ${(props) => (props.elementType === "h3" ? "24px" : null)};
+      line-height: ${(props) => (props.elementType === "h3" ? "32px" : null)};
+      font-weight: ${(props) => (props.elementType === "h3" ? "700" : null)};
+   }
 `;
 
 export const Heading = ({ text, color, element, elementType, id, click }) => {
@@ -23,24 +35,15 @@ export const Heading = ({ text, color, element, elementType, id, click }) => {
    const [space, setSpace] = useState("unset");
    const [textColor, setTextColor] = useState();
 
-   const [mobile, setMobile] = useState(null);
-   const getWindowSize = () => {
-      if (window.innerWidth <= 425) {
-         setMobile(true);
-      } else {
-         setMobile(false);
-      }
-   };
-
-   const getResponseData = () => {
-      if (mobile && elementType === "h1") {
-         elementType = "h2";
-      } else if (mobile && elementType === "h2") {
-         elementType = "h3";
-      } else if (mobile && elementType === "h3") {
-         elementType = "h4";
-      }
-   };
+   // const getResponseData = () => {
+   //    if (mobile && elementType === "h1") {
+   //       elementType = "h2";
+   //    } else if (mobile && elementType === "h2") {
+   //       elementType = "h3";
+   //    } else if (mobile && elementType === "h3") {
+   //       elementType = "h4";
+   //    }
+   // };
 
    const getStyle = () => {
       switch (elementType) {
@@ -125,12 +128,9 @@ export const Heading = ({ text, color, element, elementType, id, click }) => {
    };
 
    useEffect(() => {
-      getResponseData();
       getColor();
       getStyle();
-      getWindowSize();
-      window.addEventListener("resize", getWindowSize);
-   }, [mobile]);
+   }, []);
 
    return (
       <HeadingStyle
@@ -143,6 +143,7 @@ export const Heading = ({ text, color, element, elementType, id, click }) => {
          space={space}
          textColor={textColor}
          id={id}
+         elementType={elementType}
       >
          {text}
       </HeadingStyle>

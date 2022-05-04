@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Styled from "styled-components";
 import Arrow from "../../assets/Images/select-arrow.png";
+import { Device } from "./Devices";
 
 const SelectEl = Styled.select`
       width: 100%;

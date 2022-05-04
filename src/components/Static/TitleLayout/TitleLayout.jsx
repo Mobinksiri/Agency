@@ -33,20 +33,6 @@ export const TitleLayout = ({
    paragraphElementType,
    paragraphColor,
 }) => {
-   const [mobile, setMobile] = useState(null);
-   const getWindowSize = () => {
-      if (window.innerWidth <= 425) {
-         setMobile(true);
-      } else {
-         setMobile(false);
-      }
-   };
-
-   useEffect(() => {
-      getWindowSize();
-      window.addEventListener("resize", getWindowSize);
-   }, []);
-
    return (
       <Layout maxWidth={maxWidth} id="title-layout">
          <Heading

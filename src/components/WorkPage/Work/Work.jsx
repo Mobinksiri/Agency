@@ -196,7 +196,7 @@ const Work = () => {
                   <Back onClick={backHandler} />
                   <Heading
                      click={backHandler}
-                     text="Back to portfolio"
+                     text="Back"
                      element="p"
                      elementType="label"
                      color="dark"
