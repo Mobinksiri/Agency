@@ -1,52 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { Works } from "../../Static/Works/Works";
 import { Container } from "../../Styles/Container";
-// import WorkImage1 from "../../../assets/Images/work-1.png";
-// import WorkImage2 from "../../../assets/Images/work-2.png";
-// import WorkImage3 from "../../../assets/Images/work-3.png";
-// import WorkImage4 from "../../../assets/Images/work-4.png";
-// import WorkImage5 from "../../../assets/Images/work-5.png";
-// import WorkImage6 from "../../../assets/Images/work-6.png";
-// import WorkImage7 from "../../../assets/Images/work-7.png";
-// import WorkImage8 from "../../../assets/Images/work-8.png";
-// import WorkImage9 from "../../../assets/Images/work-9.png";
 import PortfolioWork from "../../Static/PortfolioWork/PortfolioWork";
 import { PortfolioWorksEl } from "./style";
-import PageNumbers from "../PageNumbers/PageNumbers";
 import axios from "axios";
 import Loading from "../../Static/Loading/Loading";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { getPosts } from "../../../redux/postsSlice";
 
 const PortfolioWorks = () => {
-   const [posts, setPosts] = useState();
    const [filteredDate, setFilteredDate] = useState();
-   const [categories, setCategories] = useState([]);
+
+   const posts = useSelector((state) => state.posts.posts);
+   const categories = useSelector((state) => state.posts.categories);
+   const dispatch = useDispatch();
 
    const navigate = useNavigate();
-
-   const getData = () => {
-      axios
-         .get("https://agency-2c3ae-default-rtdb.firebaseio.com/Products.json")
-         .then((response) => {
-            setPosts(response.data);
-            const categoriesItems = response.data.map((category) => {
-               return category.category;
-            });
-            const set = new Set(categoriesItems);
-            set.add("Show All");
-            const categoriesArray = [];
-            set.forEach((item) => {
-               categoriesArray.push(item);
-            });
-            setCategories(categoriesArray);
-         })
-         .catch((err) => {
-            alert(
-               "Work List not uploaded in your location!! please turn on your vpn :D"
-            );
-            alert(err);
-         });
-   };
 
    const categoryIndexHandler = (categoryName) => {
       if (categoryName === "Show All") {
@@ -60,7 +30,9 @@ const PortfolioWorks = () => {
    };
 
    useEffect(() => {
-      getData();
+      if (!posts.length && !categories.length) {
+         dispatch(getPosts());
+      }
    }, []);
 
    const categoryHandler = (e) => {
@@ -137,7 +109,6 @@ const PortfolioWorks = () => {
                   </>
                }
             />
-            {/* <PageNumbers /> */}
          </Container>
       </PortfolioWorksEl>
    );

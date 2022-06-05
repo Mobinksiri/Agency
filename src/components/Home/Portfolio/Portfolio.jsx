@@ -4,47 +4,19 @@ import { Container } from "../../Styles/Container";
 import { TitleLayout } from "../../Static/TitleLayout/TitleLayout";
 import { Works } from "../../Static/Works/Works";
 import Button from "../../Styles/Button";
-// import WorkImage1 from "../../../assets/Images/work-1.png";
-// import WorkImage2 from "../../../assets/Images/work-2.png";
-// import WorkImage3 from "../../../assets/Images/work-3.png";
-// import WorkImage4 from "../../../assets/Images/work-4.png";
 import PortfolioWork from "../../Static/PortfolioWork/PortfolioWork";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
-// import { Heading } from "../../Styles/Heading";
 import Loading from "../../Static/Loading/Loading";
-import Products from "../../../Projects-2.json";
-import { Navigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { getPosts } from "../../../redux/postsSlice";
 
 const Portfolio = () => {
-   const [posts, setPosts] = useState();
    const [filteredDate, setFilteredDate] = useState();
-   const [categories, setCategories] = useState([]);
    const navigate = useNavigate();
 
-   const getData = () => {
-      axios
-         .get("https://agency-2c3ae-default-rtdb.firebaseio.com/Products.json")
-         .then((response) => {
-            setPosts(response.data);
-            const categoriesItems = response.data.map((category) => {
-               return category.category;
-            });
-            const set = new Set(categoriesItems);
-            set.add("Show All");
-            const categoriesArray = [];
-            set.forEach((item) => {
-               categoriesArray.push(item);
-            });
-            setCategories(categoriesArray);
-         })
-         .catch((err) => {
-            alert(
-               "Work List not uploaded in your location!! please turn on your vpn :D"
-            );
-            alert(err);
-         });
-   };
+   const posts = useSelector((state) => state.posts.posts);
+   const categories = useSelector((state) => state.posts.categories);
+   const dispatch = useDispatch();
 
    const categoryIndexHandler = (categoryName) => {
       if (categoryName === "Show All") {
@@ -58,7 +30,9 @@ const Portfolio = () => {
    };
 
    useEffect(() => {
-      getData();
+      if (!posts.length && !categories.length) {
+         dispatch(getPosts());
+      }
    }, []);
 
    const categoryHandler = (e) => {

@@ -49,12 +49,14 @@ export const Navbar = () => {
                      </Link>
                   </li>
                   <li className="navbar-ul--item">
-                     <Heading
-                        element="p"
-                        elementType="text"
-                        color="light"
-                        text="Pricing"
-                     />
+                     <Link to="/portfolio">
+                        <Heading
+                           element="p"
+                           elementType="text"
+                           color="light"
+                           text="Portfolio"
+                        />
+                     </Link>
                   </li>
                   <li className="navbar-ul--item">
                      <Link to="/blog">
